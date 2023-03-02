@@ -1,0 +1,160 @@
+.about-me{
+  padding: 110px 5vw 0 5vw;
+}
+.about-me__grid-container{
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: minmax(150px,600px) minmax(100px,270px);
+  grid-template-rows: 76px 46px 188px 17px;
+  column-gap: 50px;
+  text-align: start;
+  padding: 5vw clamp(0px, calc(95vw - 1280px), 180px) 7.5vw;
+  grid-template-areas:
+  "name image"
+  "info image"
+  "description image"
+  "link image";
+}
+.about-me__name{
+  grid-area: name;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.04em;
+  font-size: 50px;
+  font-weight: 400;
+}
+.about-me__info{
+  grid-area: info;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+.about-me__description{
+  grid-area: description;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.about-me__link{
+  grid-area: link;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.about-me__image{
+  grid-area: image;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  aspect-ratio: 270/327;
+  max-height: 100%;
+}
+.about-me__portfolio-container{
+  position: relative;
+  padding: 70px clamp(0px, calc(95vw - 1280px), 180px) clamp(0px, 9vw, 125px);
+}
+.about-me__portfolio-container::before{
+  content: 'Портфолио';
+  text-align: start;
+  position: absolute;
+  top:0;
+  left:clamp(0px, calc(95vw - 1280px), 180px);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.about-me__portfolio-item{
+  font-size: 30px;
+  position: relative;
+  text-align: start;
+  font-weight: 400;
+  line-height: 50px;
+  border-bottom: 1px solid #E8E8E8;
+  padding: 20px 0 19px;
+  letter-spacing: -0.04em;
+}
+.about-me__portfolio-item::after{
+  content: '↗';
+  position: absolute;
+  right: 0;
+  line-height: 55px;
+
+}
+.about-me__portfolio-item:first-child{
+  padding-top: 0;
+}
+.about-me__portfolio-item:last-child{
+  border-bottom: none;
+}
+@media screen and (max-width: 1024px) {
+  .about-me__name{
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .about-me__info{
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .about-me__description{
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .about-me__portfolio-item{
+    font-size: 28px;
+  }
+  .about-me{
+    padding: 90px 5vw 0 5vw;
+  }
+  .about-me__grid-container{
+    grid-template-rows: 56px 38px 195px 17px;
+
+    padding: 9vw clamp(0px, calc(95vw - 1280px), 180px) 12vw;
+  }
+}
+@media screen and (max-width: 720px) {
+  .about-me{
+    padding: 70px 5vw 0 5vw;
+  }
+  .about-me__portfolio-item{
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .about-me__grid-container{
+    justify-content: center;
+    padding: 18vw clamp(0px, calc(95vw - 1280px), 180px) 22vw;
+    grid-template-columns: minmax(270px, 300px);
+    grid-template-rows: repeat(5,fit-content(352px));
+    row-gap: 20px;
+    grid-template-areas:
+    "image"
+    "name"
+    "info"
+    "description"
+    "link";
+  }
+  .about-me__link{
+    padding-top: 20px;
+  }
+  .about-me__name{
+    padding-top: 20px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .about-me__info{
+    font-size: 11px;
+    line-height: 16px;  
+  }
+  .about-me__description{
+    font-size: 11px;
+    line-height: 16px;  
+  }
+  .about-me__portfolio-container::before{
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,177 @@
+.about-project__grid-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:40px;
+  padding-top: 70px;
+  padding-bottom: 110px;
+}
+.about-project{
+  padding: 110px 5vw 0 5vw;
+}
+.about-project__info{
+  text-align: start;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.about-project__subtitle{
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;  
+  letter-spacing: -0.04em;
+}
+.about-project__text{
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.about-project__progress-bar{
+  width: 100%;
+  height: 36px;
+  position: relative;
+  padding-bottom: 140px;
+}
+.about-project__progress{
+  height: 36px;
+  position: absolute;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  background-color: #9993fc9c;
+  transition: 1s;
+}
+.about-project__backend{
+  width: 0;
+  background-color: #2BE080;
+  left: 0;
+  z-index: 1;
+}
+.about-project__frontend{
+  width: 0;
+  left: 0;
+  background-color: #F2F2F2;
+}
+.about-project__backend::before{
+  content: '1 неделя';
+  position: absolute;
+  opacity: 0;
+  transition: 0.2s;
+  font-size: 14px;
+}
+.about-project__frontend::before{
+  content: '4 недели';
+  position: absolute;
+  opacity: 0;
+  transition: 0.2s;
+  font-size: 14px;
+}
+.about-project__backend::after{
+  content: 'Back-end';
+  position: absolute;
+  bottom: -34px;
+  opacity: 0;
+  transition: 0.2s;
+  color: #A0A0A0;
+  font-size: 14px;
+
+}
+.about-project__frontend::after{
+  content: 'Front-end';
+  position: absolute;
+  bottom: -34px;
+  opacity: 0;
+  transition: 0.2s;
+  color: #A0A0A0;
+  font-size: 14px;
+}
+
+.about-project__progress-bar_visible .about-project__backend{
+  width: 20%;
+}
+.about-project__progress-bar_visible .about-project__frontend{
+  width: 80%;
+  left: 20%;
+  transition-delay: 1s;
+}
+.about-project__progress-bar_visible .about-project__backend::before,
+.about-project__progress-bar_visible .about-project__backend::after{
+  opacity: 1;
+  transition: 1s;
+  transition-delay: .6s;
+}
+.about-project__progress-bar_visible .about-project__frontend::before,
+.about-project__progress-bar_visible .about-project__frontend::after{
+  opacity: 1;
+  transition: 1s;
+  transition-delay: 1.6s;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-project__grid-container{
+    gap: 30px;
+    padding-bottom: 90px;
+  }
+  .about-project__text{
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .about-project__info{
+    gap:22px;
+  }
+  .about-project__progress-bar{
+    padding-bottom: 125px;
+  }
+  .about-project{
+    padding-top: 90px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .about-project__backend::before{
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .about-project__frontend::before{
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .about-project__backend::after{
+    font-size: 11px;
+    bottom: -24px;
+  }
+  .about-project__frontend::after{
+    font-size: 11px;
+    bottom: -24px;
+  }
+  .about-project__progress-bar{
+    padding-bottom: 93px;
+  }
+  .about-project__progress-bar_visible .about-project__backend{
+    width: 35%;
+  }
+  .about-project__progress-bar_visible .about-project__frontend{
+    width: 65%;
+    left: 35%;
+    transition-delay: 1s;
+  }
+  .about-project__grid-container{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 56px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .about-project{
+    padding-top: 70px;
+  }
+  .about-project__subtitle{
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .about-project__text{
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .about-project__info{
+    gap:16px;
+  }
+}
