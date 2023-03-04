@@ -4,7 +4,8 @@
   row-gap: 32px;
   grid-template-columns: repeat(3,minmax(300px,360px));
   justify-content: center;
-  padding: 58px 5vw 10px;
+  margin: 0;
+  padding: 70px 0 10px;
 }
 .more{
   display: flex;
@@ -28,7 +29,6 @@
 @media screen and (max-width: 1024px) {
   .cards-list{
     grid-template-columns: repeat(2,minmax(300px,360px));
-    padding: 70px 3.5vw 10px;
     column-gap: 24px;
     row-gap: 34px;
   }
@@ -38,8 +38,8 @@
 }
 @media screen and (max-width: 720px) {
   .cards-list{
-    grid-template-columns: repeat(1,minmax(300px,360px));
-    padding: 36px 3.5vw 10px;
+    grid-template-columns: repeat(1,minmax(280px,300px));
     row-gap: 16px;
+    padding: 36px 0 10px;
   }
 }

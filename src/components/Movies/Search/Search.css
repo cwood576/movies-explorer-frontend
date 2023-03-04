@@ -1,10 +1,11 @@
 .search{
-  padding: 70px clamp(60px,5vw,90px) 49px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 15px
+  row-gap: 15px;
+  padding-bottom: 37px;
+  padding-top:70px;
 } 
 .search__container{
 }
@@ -14,7 +15,6 @@
   justify-content: space-between;
   padding-bottom: 15px;
   gap:0;
-  margin-left: 10px;
 }
 .toogle-container{
   display: flex;
@@ -22,7 +22,8 @@
   gap:12px;
 }
 .search__input{
-  padding-left: 26px;
+  position: relative;
+  left: 18px;
   border: 0;
   max-width: 70%;
   flex-basis: 70%;
@@ -30,19 +31,16 @@
   font-size: 28px;
   text-align: center;
   transition: .4s;
-}
-.search:hover .search__input{
-  border: none;
-  outline: 0;
-  color: #000000e6;
+  box-sizing: border-box;
 }
 .search__input:focus-visible{
   border: none;
   outline: 0;
-  color: #000000e6;
+  color: #000000;
 }
-.search__input::placeholder{
-  
+.search__input:focus{
+  color: #000000;
+  box-shadow: inset 0px 1px 30px rgba(0, 0, 0, 0.07);
 }
 
 .search__icon{
@@ -87,6 +85,7 @@
   width: 36px;
   height: 20px;
   align-self: center;
+  z-index: 1;
 }
 .toogle__input {
   opacity: 0;
@@ -141,7 +140,7 @@
     background-size: 14px;
   }
   .search{
-    padding: 87px clamp(20px,4vw,90px) 49px;
+    padding: 87px 0 49px;
   } 
   
 }
@@ -150,13 +149,12 @@
     display: none;
   }
   .search__input{
-    padding-left: 0;
+    left: 0;
     text-align: start;
     font-size: 18px;
   }
   .search{
-    padding: 94px clamp(10px,4vw,14px) 49px;
-    row-gap: 23px;
+    row-gap: 31px;
   } 
   .search__text{
     font-size: 11px;

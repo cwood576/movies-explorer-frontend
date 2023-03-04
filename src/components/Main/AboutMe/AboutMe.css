@@ -45,6 +45,8 @@
   padding: 0;
   font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
+  color: #000000;
 }
 .about-me__image{
   grid-area: image;
@@ -57,6 +59,8 @@
 .about-me__portfolio-container{
   position: relative;
   padding: 70px clamp(0px, calc(95vw - 1280px), 180px) clamp(0px, 9vw, 125px);
+  list-style: none;
+  margin: 0;
 }
 .about-me__portfolio-container::before{
   content: 'Портфолио';
@@ -67,6 +71,10 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
+}
+.about-me__portfolio-link{
+  color: #000000;
+  text-decoration: none;
 }
 .about-me__portfolio-item{
   font-size: 30px;
