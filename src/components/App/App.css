@@ -13,9 +13,16 @@
   color:white;
   background-color: #7dbad5;
 }
+.main{
+  padding: 0 clamp(76px,4vw,90px) 0;
+
+}
 @media screen and (max-width: 720px)   {
   .title{
     font-size: 18px;
     padding-bottom: 28px;
+  }
+  .main{
+    padding: 0 clamp(20px,4vw,90px) 0;
   }
 }

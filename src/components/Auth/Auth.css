@@ -11,7 +11,7 @@
   flex-direction: column;
   width: clamp(260px,60vw, 396px);
   align-items: center;
-  gap: 42px;
+  gap: 17px;
 }
 .auth__top{
   width: clamp(260px,60vw, 396px);
@@ -57,9 +57,19 @@
   height: 45px;
   background-color: #3456F3;
   color: white;
+  border-radius: 3px;
+  border:none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
 }
 .auth__question{
   color:#A0A0A0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0;
 }
 .auth__link{
   padding-left: 6px;
@@ -81,19 +91,37 @@
   gap:10px;
   color: #A0A0A0;
 }
-.auth__question{
-  margin: 0;
-  padding: 0;
-}
 .auth__button-container{
   display: flex;
   flex-direction: column;
   gap:16px;
   width: 100%;
+  padding-top: 69px;
+}
+.auth__button-container_page_signin{
+  padding-top: 179px;
 }
 @media screen and (max-width: 720px)   {
   .auth__top{
     align-items: center;
+  }
+  .auth__button-container{
+    padding-top: 157px;
+  }
+  .auth__button-container_page_signin{
+    padding-top: 267px;
+  }
+  .auth__top{
+    padding-bottom: 80px;
+    gap: 50px;
+  }
+  .auth__button{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .auth__question{
+    font-size: 12px;
+    line-height: 15px;
   }
   
 }

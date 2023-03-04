@@ -18,11 +18,17 @@ function Auth(props) {
       </div>
       <form className='auth__form'>
         {props.page === 'signup' ? (
-          <label className='auth__label' for="name">Имя <input className='auth__input' name='name'></input></label>)
+          <label className='auth__label' for="name">Имя
+            <input className='auth__input' required name='name' />
+          </label>)
           : ''}
-        <label className='auth__label' for="e-mail">E-mail <input className='auth__input' name='e-mail'></input></label>
-        <label className='auth__label' for="password">Пароль <input className='auth__input' name='password'></input></label>
-        <div className='auth__button-container'>
+        <label className='auth__label' for="e-mail">E-mail
+          <input className='auth__input' required name='e-mail' />
+        </label>
+        <label className='auth__label' for="password">Пароль
+          <input className='auth__input' required name='password' />
+        </label>
+        <div className={`auth__button-container ${props.page === 'signup' ? '' : 'auth__button-container_page_signin'}`}>
           <button className='auth__button'>
             {props.page === 'signup' ? 'Зарегистрироваться' : 'Войти'}
           </button>

@@ -4,13 +4,13 @@ import './MoviesCardList.css';
 function MoviesCardList(props) {
   return (
     <>
-      <section className='cards-list'>
+      <ul className='cards-list'>
         <MoviesCard page={props.page} />
         <MoviesCard page={props.page} />
         <MoviesCard page={props.page} />
         <MoviesCard page={props.page} />
         <MoviesCard page={props.page} />
-      </section>
+      </ul>
       <section className='more'>
         <button className='more__button'>Ещё</button>
       </section>

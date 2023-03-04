@@ -5,7 +5,7 @@ function Search() {
     <form className='search'>
       <div className='input-container'>
         <div className='search__icon'></div>
-        <input placeholder='Фильм' className='search__input'></input>
+        <input placeholder='Фильм' required className='search__input' />
         <button className='search__button' onClick={(evt) => {
           evt.preventDefault()
         }}></button>
@@ -17,7 +17,7 @@ function Search() {
         </label>
         <p className='search__text'>Короткометражки</p>
       </div>
-    </form>
+    </form >
   );
 }
 

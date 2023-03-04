@@ -7,11 +7,12 @@ import Tech from './Techs/Tech';
 function Main() {
   return (
     <>
-      <Promo />
-      <AboutProject />
-      <Tech />
-      <AboutMe />
-
+      <main >
+        <Promo />
+        <AboutProject />
+        <Tech />
+        <AboutMe />
+      </main>
     </>
   );
 }
