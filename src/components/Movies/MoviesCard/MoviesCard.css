@@ -1,0 +1,110 @@
+.card{
+  aspect-ratio: 360/319;
+  display: flex;
+  flex-direction: column;
+  background: #FDFDFD;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+}
+.movie__info{
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+}
+.movie__title{
+  font-size: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0;
+  align-self: center;
+}
+.movie__duration{
+  font-size: 13px;
+  text-align: right;
+  color: #A0A0A0;
+  align-self: center;
+  margin: 0;
+}
+.movie__preview{
+  width: 100%;
+  aspect-ratio: 360/200;
+}
+.movie__button{
+  border-radius: 30px;
+  width: 100px;
+  height: 29px;
+  border: 0;
+  transition: .7s;
+  position: relative;
+}
+.movie__button_unchecked{
+  background: #F9F9F9;
+  font-size: 12px;
+  transition: .2s;
+}
+.movie__button_checked{
+  background-color: #FF3055;
+  transition: .3s;
+  opacity: 1;
+}
+.movie__button_checked::after{
+  content: '';
+  background-image: url('../../../images/checked.svg');
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  top:10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+.movie__button_unchecked::after{
+  content: 'Сохранить';
+}
+.movie__button_page_saved::after{
+  content: '';
+  background-image: url('../../../images/cross.svg');
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 8px;
+  top: 9px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.movie__button:hover{
+  scale: 1.05;
+  cursor: pointer;
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.1);
+}
+.button__container{
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 720px) {
+  .movie__title{
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .movie__info{
+    padding: 11px;
+  }
+  .card{
+    aspect-ratio: 300/220;
+  }
+  .movie__duration{
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .movie__title_bold{
+    font-weight: 700;
+  }
+  .movie__duration_bold{
+    font-weight: 700;
+  }
+  
+}

@@ -1,0 +1,28 @@
+.App {
+}
+.title{
+  font-size: 22px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid black;
+  margin: 0;
+  font-weight: 400;
+  text-align: start;
+  letter-spacing: -0.04em;
+}
+::selection {
+  color:white;
+  background-color: #7dbad5;
+}
+.main{
+  padding: 0 clamp(76px,4vw,90px) 0;
+
+}
+@media screen and (max-width: 720px)   {
+  .title{
+    font-size: 18px;
+    padding-bottom: 28px;
+  }
+  .main{
+    padding: 0 clamp(20px,4vw,90px) 0;
+  }
+}
